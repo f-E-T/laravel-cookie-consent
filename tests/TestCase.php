@@ -1,9 +1,9 @@
 <?php
 
-namespace Dmr\CookieConsent\Tests;
+namespace Fet\CookieConsent\Tests;
 
-use Dmr\CookieConsent\CookieConsentServiceProvider;
-use Dmr\PhpToJs\PhpToJsServiceProvider;
+use Fet\CookieConsent\CookieConsentServiceProvider;
+use Fet\PhpToJs\PhpToJsServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

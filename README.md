@@ -5,7 +5,7 @@ The `fet/laravel-cookie-consent` package is a simple Laravel wrapper around the 
 # Installation
 
 1. `composer require fet/laravel-cookie-consent`
-2. `php artisan vendor:publish --provider="Dmr\CookieConsent\CookieConsentServiceProvider" --tag="config"`
+2. `php artisan vendor:publish --provider="Fet\CookieConsent\CookieConsentServiceProvider" --tag="config"`
 
 # Configuration
 
@@ -50,10 +50,10 @@ If you want to perform a page redirect after the user has made the cookie consen
 
 # Events
 
-Sometimes you may need to change the configuration, after the application is booted. You can do so by listening to the `\Dmr\CookieConsent\Events\ConfigLoaded` event.
+Sometimes you may need to change the configuration, after the application is booted. You can do so by listening to the `\Fet\CookieConsent\Events\ConfigLoaded` event.
 
 ```php
-use Dmr\CookieConsent\Events\ConfigLoaded;
+use Fet\CookieConsent\Events\ConfigLoaded;
 
 Event::listen(function (ConfigLoaded $event) {
     $config = $event->cookieConsent->config;

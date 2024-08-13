@@ -18,7 +18,7 @@
         "php" : "^8.1|^8.2|^8.3",
         "illuminate/support": "^10.0|^11.0",
         "illuminate/events": "^10.0|^11.0",
-        "fet/laravel-php-to-js": "^0.1"
+        "fet/laravel-php-to-js": "^0.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.0|^11.0",
@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dmr\\CookieConsent\\": "src/"
+            "Fet\\CookieConsent\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -36,7 +36,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Dmr\\CookieConsent\\Tests\\": "tests/"
+            "Fet\\CookieConsent\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -48,7 +48,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Dmr\\CookieConsent\\CookieConsentServiceProvider"
+                "Fet\\CookieConsent\\CookieConsentServiceProvider"
             ]
         }
     }

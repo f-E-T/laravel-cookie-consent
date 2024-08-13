@@ -1,8 +1,8 @@
 <?php
 
-namespace Dmr\CookieConsent\Tests;
+namespace Fet\CookieConsent\Tests;
 
-use Dmr\CookieConsent\Tests\TestCase;
+use Fet\CookieConsent\Tests\TestCase;
 
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\DataProvider;

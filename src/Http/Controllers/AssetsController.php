@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmr\CookieConsent\Http\Controllers;
+namespace Fet\CookieConsent\Http\Controllers;
 
 use Illuminate\Http\Response;
 use Illuminate\Contracts\Routing\ResponseFactory;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmr\CookieConsent\Tests;
+namespace Fet\CookieConsent\Tests;
 
 use PHPUnit\Framework\Attributes\Test;
 

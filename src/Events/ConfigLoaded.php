@@ -1,6 +1,6 @@
 <?php
  
-namespace Dmr\CookieConsent\Events;
+namespace Fet\CookieConsent\Events;
  
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;

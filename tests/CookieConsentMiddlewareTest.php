@@ -1,15 +1,15 @@
 <?php
 
-namespace Dmr\CookieConsent\Tests;
+namespace Fet\CookieConsent\Tests;
 
 use Illuminate\Http\Request;
-use Dmr\PhpToJs\PhpToJsFacade;
+use Fet\PhpToJs\PhpToJsFacade;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\Framework\Attributes\Test;
-use Dmr\CookieConsent\CookieConsentMiddleware;
+use Fet\CookieConsent\CookieConsentMiddleware;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Event;
-use Dmr\CookieConsent\Events\ConfigLoaded;
+use Fet\CookieConsent\Events\ConfigLoaded;
 use Illuminate\Contracts\Http\Kernel;
 
 class CookieConsentMiddlewareTest extends TestCase

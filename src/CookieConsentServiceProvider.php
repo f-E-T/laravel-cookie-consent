@@ -1,10 +1,10 @@
 <?php
 
-namespace Dmr\CookieConsent;
+namespace Fet\CookieConsent;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Http\Kernel;
-use Dmr\CookieConsent\CookieConsentMiddleware;
+use Fet\CookieConsent\CookieConsentMiddleware;
 
 class CookieConsentServiceProvider extends ServiceProvider
 {

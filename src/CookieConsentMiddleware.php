@@ -1,12 +1,12 @@
 <?php
 
-namespace Dmr\CookieConsent;
+namespace Fet\CookieConsent;
 
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Dmr\CookieConsent\Events\ConfigLoaded;
-use Dmr\PhpToJs\PhpToJsFacade;
+use Fet\CookieConsent\Events\ConfigLoaded;
+use Fet\PhpToJs\PhpToJsFacade;
 use stdClass;
 
 class CookieConsentMiddleware

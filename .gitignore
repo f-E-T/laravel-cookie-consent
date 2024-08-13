@@ -1,0 +1,6 @@
+/.vscode
+/.idea
+/.phpunit.cache
+/vendor
+/node_modules
+composer.lock

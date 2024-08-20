@@ -22,7 +22,7 @@ class CookieConsentMiddleware
 
         $enabled = config('cookieconsent.enable', false);
 
-        if (!$enabled || !$response->getContent() || !$this->isHtml($response->getContent())) {
+        if (!$enabled || !$response->getContent() || !$this->isHtml($response->getContent()) || $this->isExcluded($request)) {
             return $response;
         }
 
@@ -84,5 +84,15 @@ class CookieConsentMiddleware
     protected function isHtml(string $content): bool
     {
         return $content !== strip_tags($content);
+    }
+
+    protected function isExcluded(Request $request): bool
+    {
+        $path = $request->path();
+        $exclude = collect((array) config('cookieconsent.paths.exclude', []));
+
+        return $exclude->contains(function ($value) use ($path) {
+            return preg_match("/^$value$/", $path) === 1;
+        });
     }
 }

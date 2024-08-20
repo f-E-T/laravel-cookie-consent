@@ -118,4 +118,30 @@ class CookieConsentMiddlewareTest extends TestCase
 
         $this->assertEquals('{"foo": "bar"}', $response->getContent());
     }
+
+    #[Test]
+    public function it_does_not_add_assets_when_path_is_excluded()
+    {
+        $this->app->config->set('cookieconsent', [
+            'enable' => true,
+            'paths' => [
+                'exclude' => [
+                    'admin\/foo',
+                    'admin\/dashboard',
+                    'admin\/bar',
+                ]
+            ]
+        ]);
+
+        $request = Request::create('https://www.example.com/admin/dashboard');
+        $middleware = new CookieConsentMiddleware();
+        $response = $middleware->handle($request, function ($request) {
+            $response = new Response();
+            $response->setContent('<html><head></head><body></body></html>');
+
+            return $response;
+        });
+
+        $this->assertEquals('<html><head></head><body></body></html>', $response->getContent());
+    }
 }

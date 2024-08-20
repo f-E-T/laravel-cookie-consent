@@ -73,6 +73,10 @@ class ConfigTest extends TestCase
         $this->assertArrayHasKey('config', $config);
         $this->assertIsArray($config['config']);
         $this->assertEquals($this->defaultConfig, $config['config']);
+
+        $this->assertArrayHasKey('paths', $config);
+        $this->assertArrayHasKey('exclude', $config['paths']);
+        $this->assertIsArray($config['paths']['exclude']);
     }
 
     #[Test]

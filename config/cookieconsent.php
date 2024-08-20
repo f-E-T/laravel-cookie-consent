@@ -1,11 +1,60 @@
 <?php
 
 return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Enable Cookie Consent
+    |--------------------------------------------------------------------------
+    |
+    | This option controls whether the cookie consent is enabled or disabled.
+    |
+    */
     'enable' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Routes
+    |--------------------------------------------------------------------------
+    |
+    | Here you may define the routes for handling the cookie consent actions.
+    |
+    | - 'post': The route name that handles POST requests when the user makes a consent choice.
+    | - 'redirect': The route name to redirect to after the user makes a consent choice.
+    | 
+    | If these are left empty, no actions will be taken for these events.
+    |
+    */
     'routes' => [
-        'post' => '',
-        'redirect' => '',
+        'post' => '', // Example: 'cookie-consent.post'
+        'redirect' => '', // Example: 'cookie-consent.redirect'
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Path Exclude
+    |--------------------------------------------------------------------------
+    |
+    | Define paths where the cookie consent should NOT be shown.
+    | Use valid regex patterns to exclude specific paths.
+    | Example: To exclude all paths under /admin/*, add 'admin(\/.*)?'.
+    |
+    */
+    'paths' => [
+        'exclude' => []
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Cookie Consent Configuration
+    |--------------------------------------------------------------------------
+    |
+    | This array should contain the full configuration for the cookie consent
+    | library. It directly maps to the configuration options provided by the
+    | CookieConsent JavaScript library. Customize this array to fit your needs.
+    | Refer to the documentation for available options.
+    |
+    */
     'config' => [
         'categories' => [
             'necessary' => [
@@ -56,4 +105,5 @@ return [
             ]
         ]
     ]
+
 ];

@@ -18,6 +18,9 @@ return [
         'post' => '',
         'redirect' => '',
     ],
+    'paths' => [
+        'exclude' => []
+    ],
     'config' => [],
 ];
 ```
@@ -47,6 +50,11 @@ The data received by the controller looks like this:
 If you want to perform a page redirect after the user has made the cookie consent choice, you can provide a route name to `routes.redirect`.
 
 > If the `routes.redirect` is empty, no redirect is made.
+
+# Exclude
+To exclude the cookie consent from appearing on certain URL paths, add those paths to the `paths.exclude` configuration array.
+
+> You can use valid regex patterns. For example, to exclude all `/admin/*` paths, add `admin(\/.*)?` to the exclude array.
 
 # Events
 

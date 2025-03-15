@@ -25,7 +25,7 @@ return [
 ];
 ```
 
-The configuration consists of three keys: `enable`, `routes` and `config`. The `config` value is an array representation of the [Configuration](https://cookieconsent.orestbida.com/reference/configuration-reference.html) object and is passed to the [CookieConsent](https://github.com/orestbida/cookieconsent) package as JSON. Feel free to configure the package as you like.
+The configuration consists of four keys: `enable`, `routes`, `paths` and `config`. The `config` value is an array representation of the [Configuration](https://cookieconsent.orestbida.com/reference/configuration-reference.html) object and is passed to the [CookieConsent](https://github.com/orestbida/cookieconsent) package as JSON. Feel free to configure the package as you like.
 
 ## POST Route
 The [Callback/Events](https://cookieconsent.orestbida.com/advanced/callbacks-events.html) are not directly configurable. Instead you can define a `routes.post` which corresponds to an existing route name which is then called via POST request when the events `onFirstConsent` or `onChange` are triggered.
@@ -51,7 +51,7 @@ If you want to perform a page redirect after the user has made the cookie consen
 
 > If the `routes.redirect` is empty, no redirect is made.
 
-# Exclude
+## Exclude Paths
 To exclude the cookie consent from appearing on certain URL paths, add those paths to the `paths.exclude` configuration array.
 
 > You can use valid regex patterns. For example, to exclude all `/admin/*` paths, add `admin(\/.*)?` to the exclude array.

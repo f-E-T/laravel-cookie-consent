@@ -40,6 +40,7 @@ async function logConsent() {
     acceptType: preferences.acceptType,
     acceptedCategories: preferences.acceptedCategories,
     rejectedCategories: preferences.rejectedCategories,
+    custom: laravelCookieConsent.config.custom ?? {},
   };
 
   try {

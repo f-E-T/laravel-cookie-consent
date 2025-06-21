@@ -42,7 +42,8 @@ The data received by the controller looks like this:
         "necessary",
         "analytics"
     ],
-    "rejectedCategories": []
+    "rejectedCategories": [],
+    "custom": {}
 }
 ```
 
@@ -70,6 +71,14 @@ Event::listen(function (ConfigLoaded $event) {
 
     $event->cookieConsent->config = $config;
 });
+```
+
+## Custom POST data
+
+To include custom data in the POST request, set the `custom` key in the configuration. This data will be sent alongside the consent information.
+
+```php
+$config['custom'] = ['foo' => 'bar'];
 ```
 
 # Tests
